@@ -1,0 +1,31 @@
+`timescale 1ns / 1ps
+
+module layer_0(in, out);
+
+  input [149:0] in;
+  output reg [0:0] out;
+  reg signed [8:0] th0 = 9'sd1;
+  reg [7:0] PS0;
+
+
+  reg [7:0] FS;
+
+  integer idx;
+  reg [149:0] input_w = 150'b011111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111;
+  reg [149:0] wi;
+  always @* begin
+    for( idx = 0; idx<150; idx = idx + 1) begin
+      wi[idx] = ((input_w[idx])~^(in[idx]));
+    end
+  end
+
+  always @* begin
+    FS = wi[0]+ wi[1]+ wi[2]+ wi[3]+ wi[4]+ wi[5]+ wi[6]+ wi[7]+ wi[8]+ wi[9]+ wi[10]+ wi[11]+ wi[12]+ wi[13]+ wi[14]+ wi[15]+ wi[16]+ wi[17]+ wi[18]+ wi[19]+ wi[20]+ wi[21]+ wi[22]+ wi[23]+ wi[24]+ wi[25]+ wi[26]+ wi[27]+ wi[28]+ wi[29]+ wi[30]+ wi[31]+ wi[32]+ wi[33]+ wi[34]+ wi[35]+ wi[36]+ wi[37]+ wi[38]+ wi[39]+ wi[40]+ wi[41]+ wi[42]+ wi[43]+ wi[44]+ wi[45]+ wi[46]+ wi[47]+ wi[48]+ wi[49]+ wi[50]+ wi[51]+ wi[52]+ wi[53]+ wi[54]+ wi[55]+ wi[56]+ wi[57]+ wi[58]+ wi[59]+ wi[60]+ wi[61]+ wi[62]+ wi[63]+ wi[64]+ wi[65]+ wi[66]+ wi[67]+ wi[68]+ wi[69]+ wi[70]+ wi[71]+ wi[72]+ wi[73]+ wi[74]+ wi[75]+ wi[76]+ wi[77]+ wi[78]+ wi[79]+ wi[80]+ wi[81]+ wi[82]+ wi[83]+ wi[84]+ wi[85]+ wi[86]+ wi[87]+ wi[88]+ wi[89]+ wi[90]+ wi[91]+ wi[92]+ wi[93]+ wi[94]+ wi[95]+ wi[96]+ wi[97]+ wi[98]+ wi[99]+ wi[100]+ wi[101]+ wi[102]+ wi[103]+ wi[104]+ wi[105]+ wi[106]+ wi[107]+ wi[108]+ wi[109]+ wi[110]+ wi[111]+ wi[112]+ wi[113]+ wi[114]+ wi[115]+ wi[116]+ wi[117]+ wi[118]+ wi[119]+ wi[120]+ wi[121]+ wi[122]+ wi[123]+ wi[124]+ wi[125]+ wi[126]+ wi[127]+ wi[128]+ wi[129]+ wi[130]+ wi[131]+ wi[132]+ wi[133]+ wi[134]+ wi[135]+ wi[136]+ wi[137]+ wi[138]+ wi[139]+ wi[140]+ wi[141]+ wi[142]+ wi[143]+ wi[144]+ wi[145]+ wi[146]+ wi[147]+ wi[148]+ wi[149];
+    PS0 = 1'b0+ wi[0]+ wi[1]+ wi[5]+ wi[6]+ wi[7]+ wi[10]+ wi[12]+ wi[16]+ wi[17]+ wi[23]+ wi[26]+ wi[27]+ wi[28]+ wi[30]+ wi[31]+ wi[32]+ wi[33]+ wi[34]+ wi[35]+ wi[36]+ wi[38]+ wi[39]+ wi[40]+ wi[43]+ wi[45]+ wi[46]+ wi[50]+ wi[51]+ wi[52]+ wi[53]+ wi[55]+ wi[57]+ wi[60]+ wi[61]+ wi[62]+ wi[63]+ wi[64]+ wi[66]+ wi[67]+ wi[68]+ wi[70]+ wi[72]+ wi[74]+ wi[75]+ wi[76]+ wi[81]+ wi[83]+ wi[84]+ wi[85]+ wi[86]+ wi[87]+ wi[88]+ wi[89]+ wi[90]+ wi[91]+ wi[96]+ wi[101]+ wi[102]+ wi[107]+ wi[110]+ wi[111]+ wi[116]+ wi[118]+ wi[123]+ wi[124]+ wi[125]+ wi[127]+ wi[128]+ wi[130]+ wi[132]+ wi[133]+ wi[136]+ wi[137]+ wi[138]+ wi[140]+ wi[142]+ wi[146]+ wi[147];
+  end
+
+  always @* begin
+    out[0] = $signed(FS-(PS0<<1)) >= $signed(th0);
+  end
+
+endmodule
