@@ -1,3 +1,3 @@
 # BNN
 
-TODO --> Explanation
+TODO --> Explaination
