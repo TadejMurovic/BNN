@@ -1,6 +1,6 @@
 # Combinational BNN toolchain with resource-optimized architecture build tool.
 
-Part of paper: "(Tadej Murovic, Andrej Trost), Resource-Optimized Combinational Binary Nerual Network Circuits"
+Part of paper: "(Tadej Murovic, Andrej Trost), Resource-Optimized Combinational Binary Neural Network Circuits"
 --> Not yet published.
 
 ------------------------------------------------------------------------------------------------------------------
