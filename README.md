@@ -33,7 +33,7 @@ bnn_train.py is called which trains our network based on sets created by the bin
 ----------------------------
 **Step 5**
 
-bin_set.py is called which transforms network parameters to a digital appropriate form (integer bias to unsigned integer bias and -1/1 weights to 1/0). Parameters are dumped to hep/, imaging/, and cybersecurity/. dump_w are weights and dump_t are threshold/biases.
+bin_set.py is called which transforms network parameters to a digital appropriate form (integer bias to unsigned integer bias and -1/1 weights to 1/0). Parameters are dumped to hep/, imaging/, and cybersecurity/. dump_w are weights and dump_t are thresholds/biases.
 
 ----------------------------
 **Step 6**
