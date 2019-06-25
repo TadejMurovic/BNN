@@ -5,7 +5,7 @@ Part of paper: "(Tadej Murovic, Andrej Trost), Resource-Optimized Combinational 
 
 
 ------------------------------------------------------------------------------------------------------------------
-Framework for building combinational Verilog circuits for binary neural networks.
+**Framework for building combinational Verilog circuits for binary neural networks.**
 ![Optional Text](flow_final.png)
 
 Step 1. 
