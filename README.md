@@ -24,3 +24,25 @@ Newest python dependencies versions should work. In case of issues take a look a
 **Step 1-2**
 
 Files cybersecurity_dataset_unswb15.m, hep_dataset_susy.m, and imaging_dataset_mnist.m are scripts that binarize our datasets and divide them into training, testing, and validation sets for cybersecurity, high energy physics, and imaging, respectively. Taken from https://github.com/TadejMurovic/BNN_Deployment, which is part of "T. Murovič, A. Trost, Massively Parallel Combinational Binary Neural Networks for Edge Processing, Elektrotehniški vestnik, vol. 86, no. 1-2, pp. 47-53, 2019" where an in-depth explanation of these scripts is given.
+
+----------------------------
+**Step 3-4**
+
+bnn_train.py is called which trains our network based on sets created by the binarization scripts from previous steps. This is repeatable, where the user can play around with the training parameters to achive the desired performance and size of the network.
+
+----------------------------
+**Step 5**
+
+bin_set.py is called which transforms network parameters to a digital appropriate form (integer bias to unsigned integer bias and -1/1 weights to 1/0). Parameters are dumped to hep/, imaging/, and cybersecurity/. dump_w are weights and dump_t are threshold/biases.
+
+----------------------------
+**Step 6**
+
+make_model.m function is called. It either:
+  1. Outputs Verilog modules of standard stargihtforward combinational network circuits. HDL codes per layer are dumped to hep/, 
+  imaging/,   and cybersecurity/.
+  2. Outputs Verilog modules of our resource-optimized combinational network circuits. HDL codes per layer are dumped to hep/, imaging/,   and cybersecurity/.
+
+
+
+
