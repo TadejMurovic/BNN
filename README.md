@@ -33,15 +33,15 @@ bnn_train.py is called which trains our network based on sets created by the bin
 ----------------------------
 **Step 5**
 
-bin_set.py is called which transforms network parameters to a digital appropriate form (integer bias to unsigned integer bias and -1/1 weights to 1/0). Parameters are dumped to hep/, imaging/, and cybersecurity/. dump_w are weights and dump_t are thresholds/biases.
+bin_set.py is called which transforms network parameters to a digital appropriate form (integer bias to unsigned integer bias and -1/1 weights to 1/0). Parameters are dumped to bin_set/hep/, bin_set/imaging/, and bin_set/cybersecurity/. dump_w are weights and dump_t are thresholds/biases.
 
 ----------------------------
 **Step 6**
 
 make_model.m function is called. It either:
-  1. Outputs Verilog modules of standard stargihtforward combinational network circuits. HDL codes per layer are dumped to hep/, 
-  imaging/,   and cybersecurity/.
-  2. Outputs Verilog modules of our resource-optimized combinational network circuits. HDL codes per layer are dumped to hep/, imaging/,   and cybersecurity/.
+  1. Outputs Verilog modules of standard stargihtforward combinational network circuits. HDL codes per layer are dumped to bin_set/hep/, 
+  bin_set/imaging/, and bin_set/cybersecurity/.
+  2. Outputs Verilog modules of our resource-optimized combinational network circuits. HDL codes per layer are dumped to bin_set/hep/, bin_set/imaging/, and bin_set/cybersecurity/. Resource-optimized code is named "precount_model".
 
 
 
