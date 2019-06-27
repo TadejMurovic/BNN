@@ -25,6 +25,8 @@ Newest python dependencies versions should work. In case of issues take a look a
 
 Files cybersecurity_dataset_unswb15.m, hep_dataset_susy.m, and imaging_dataset_mnist.m are scripts that binarize our datasets and divide them into training, testing, and validation sets for cybersecurity, high energy physics, and imaging, respectively. Taken from https://github.com/TadejMurovic/BNN_Deployment, which is part of "T. Murovič, A. Trost, Massively Parallel Combinational Binary Neural Networks for Edge Processing, Elektrotehniški vestnik, vol. 86, no. 1-2, pp. 47-53, 2019" where an in-depth explanation of these scripts is given.
 
+Datasets are available as referenced in our paper and at [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3258657.svg)](https://doi.org/10.5281/zenodo.3258657) as well.
+
 ----------------------------
 **Step 3-4**
 
